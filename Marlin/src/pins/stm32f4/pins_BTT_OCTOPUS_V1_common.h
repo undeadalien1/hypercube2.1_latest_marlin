@@ -62,7 +62,7 @@
 //
 #ifndef Z_MIN_PROBE_PIN
   #if ENABLED(BLTOUCH)
-    #define Z_MIN_PROBE_PIN                 PC5 //was PB7
+    #define Z_MIN_PROBE_PIN                 PB7 //was PB7
   #else
     #define Z_MIN_PROBE_PIN                 PB7 //was pc5   // Probe (Proximity switch) port
   #endif
