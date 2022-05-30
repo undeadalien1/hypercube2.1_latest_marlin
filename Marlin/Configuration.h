@@ -350,7 +350,7 @@
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
-#define HOTEND_OFFSET_x {18.0, 0.0} // (mm) relative X-offset for each nozzle
+#define HOTEND_OFFSET_x {23.0, 0.0} // (mm) relative X-offset for each nozzle
 //#define HOTEND_OFFSET_Y { 0.0, 5.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 
@@ -486,8 +486,8 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 5
-#define TEMP_SENSOR_1 998
+#define TEMP_SENSOR_0 1047
+#define TEMP_SENSOR_1 1047
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
@@ -596,9 +596,9 @@
 //  #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  12.00,  17.08 }
-    #define DEFAULT_Ki_LIST {   0.97,   1.14 }
-    #define DEFAULT_Kd_LIST { 36.44, 64.22 }
+    #define DEFAULT_Kp_LIST {  17.82,  14.89 }
+    #define DEFAULT_Ki_LIST {   2.12,   2.27 }
+    #define DEFAULT_Kd_LIST { 37.42, 24.42 }
   //#else
     //#define DEFAULT_Kp  22.20
     //#define DEFAULT_Ki   1.08
@@ -645,9 +645,9 @@
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
-#define DEFAULT_bedKp 198.38
-#define DEFAULT_bedKi 35.93
-#define DEFAULT_bedKd 730.10
+#define DEFAULT_bedKp 282.18
+#define DEFAULT_bedKi 55.11
+#define DEFAULT_bedKd 963.16
 //===========================================================================
 //==================== PID > Chamber Temperature Control ====================
 //===========================================================================
@@ -927,7 +927,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 40, 40, 400, 215, 353.05 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 40, 40, 400, 207.50, 207.50 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1230,8 +1230,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 2
-//#define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 2
+#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1331,8 +1331,8 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
-#define INVERT_E1_DIR true
+#define INVERT_E0_DIR false
+#define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
 #define INVERT_E4_DIR false

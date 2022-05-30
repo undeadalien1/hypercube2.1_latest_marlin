@@ -26,10 +26,11 @@
 //
 // Temperature Sensors
 //
-#if TEMP_SENSOR_0 == 20
-  #define TEMP_0_PIN                        PF8   // PT100 Connector
-#else
+//#if TEMP_SENSOR_0 == 20
+//  #define TEMP_0_PIN                        PF8   // PT100 Connector
+//#else
   #define TEMP_0_PIN                        PF4   // TH0
-#endif
+  #define TEMP_1_PIN                        PF5   // TH0
+//#endif
 
 #include "pins_BTT_OCTOPUS_V1_common.h"
